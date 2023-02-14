@@ -59,15 +59,23 @@
   border-radius: 5px;
   cursor: pointer;
 }
+.userCard__footer-btn-trash:hover{
+  background-color: #D93F3F ;
+  border: 1px solid  #D85D5D;
+}
 
 .userCard__footer-btn-edit {
   width: 43px;
   height: 43px;
   font-size: 22px;
-  color: #D3D3D3;
+  color: rgb(119, 118, 118);
   background-color: #F6F6F6;
   border: 1px solid #BDBDBD;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.userCard__footer-btn-edit:hover{
+  color: black;
 }
 
