@@ -10,10 +10,15 @@ const BASE_URL = "https://users-crud.academlo.tech/"
 function App() {
   const [users, setUsers] = useState([])
   const [isShowModal, setIsShowModal] = useState(false)
+  const [isAlert, setIsAlert] = useState(false)
   const [updatingUser, setUpdatingUser] = useState()
 
   const handleClickShowModal =() => {
     setIsShowModal((isShowModal) => !isShowModal)
+  }
+
+  const handleClickAlert = () => {
+    setIsAlert((isAlert) => !isAlert)
   }
 
   const createUser = (data) => {
@@ -70,7 +75,9 @@ function App() {
       users={users} 
       deleteUser={deleteUser} 
       setUpdatingUser={setUpdatingUser} 
-      handleClickShowModal={handleClickShowModal}
+      handleClickShowModal={handleClickShowModal} 
+      handleClickAlert={handleClickAlert}
+      isAlert={isAlert}
     />
     </div>
   )
