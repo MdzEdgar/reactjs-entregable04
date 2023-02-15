@@ -13,7 +13,8 @@ const UsersList = ({users, deleteUser, setUpdatingUser, handleClickShowModal, ha
             user={user}
             deleteUser={deleteUser}
             setUpdatingUser={setUpdatingUser}
-            handleClickShowModal={handleClickShowModal}
+            handleClickShowModal={handleClickShowModal} 
+            handleClickAlert={handleClickAlert} 
           />
         ))}
       </section>

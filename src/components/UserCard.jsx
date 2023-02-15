@@ -1,7 +1,7 @@
 import React from 'react'
 import "./styles/UserCard.css"
 
-const UserCard = ({user, deleteUser, setUpdatingUser, handleClickShowModal}) => {
+const UserCard = ({user, deleteUser, setUpdatingUser, handleClickShowModal, handleClickAlert}) => {
 
   const handleClickEdit = () => {
     setUpdatingUser(user)
@@ -30,7 +30,13 @@ const UserCard = ({user, deleteUser, setUpdatingUser, handleClickShowModal}) => 
       </ul>
       <hr className='userCard__separator' />
       <footer className='userCard__footer'>
-        <button className='userCard__footer-btn-trash' onClick={() => deleteUser(user.id)}><i className='bx bx-trash'></i></button>
+        <button className='userCard__footer-btn-trash' onClick={
+          () => {
+            deleteUser(user.id)
+            setTimeout(() => {
+              handleClickAlert()
+            }, 500);
+          }}><i className='bx bx-trash'></i></button>
         <button className='userCard__footer-btn-edit' onClick={handleClickEdit}><i className='bx bx-pencil'></i></button>
       </footer>
     </article>
