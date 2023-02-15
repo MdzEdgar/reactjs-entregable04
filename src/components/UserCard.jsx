@@ -10,7 +10,7 @@ const UserCard = ({user, deleteUser, setUpdatingUser, handleClickShowModal}) => 
 
   return (
     <article className='userCard'>
-      <h3 className='userCard__fullName'>{user.first_name} {user.last_name}</h3>
+      <h3 title={user.first_name + " " + user.last_name} className='userCard__fullName'>{user.first_name} {user.last_name}</h3>
       <hr className='userCard__separator' />
       <ul className='userCard__list'>
         <li className='userCard__item'>
