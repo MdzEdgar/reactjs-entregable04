@@ -58,12 +58,12 @@ const ModalForm = ({isShowModal, handleClickShowModal, createUser, updatingUser,
         <div>
           <label className='modalForm__label' htmlFor="">Password</label>
           <input className='modalForm__input' type="password" {...register("password", { required: true, minLength: 8 })} />
-          {errors.email && <p className='modalForm__div-error'>Please check the Password</p>}
+          {errors.password && <p className='modalForm__div-error'>Please check the Password</p>}
         </div>
         <div>
           <label className='modalForm__label' htmlFor="">Birthday</label>
           <input className='modalForm__input' type="date" {...register("birthday", {required: true})} />
-          {errors.email && <p className='modalForm__div-error'>Please check the Birthday</p>}
+          {errors.birthday && <p className='modalForm__div-error'>Please check the Birthday</p>}
         </div>
         <button className='modalForm__btn'>{updatingUser ? "Save changes" : "Add new user"}</button>
       </form>
