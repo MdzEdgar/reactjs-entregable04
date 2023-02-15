@@ -39,7 +39,9 @@ function App() {
 
   const deleteUser = (id) => {
     axios.delete(`${BASE_URL}users/${id}/`)
-    .then(() => getAllUsers())
+    .then(() => {
+      getAllUsers()
+    })
     .catch((err => console.log(err)))
   }
 

@@ -5,12 +5,16 @@
   height: 100vh;
   left: 0;
   right: 0;
-  display: grid;
   place-content: center;
+  display: none;
+}
+
+.show--alert{
+  display: grid;
 }
 
 .hide--alert {
-  display: none
+  
 }
 
 .cardAlert__title {

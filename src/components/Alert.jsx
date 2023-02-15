@@ -8,7 +8,7 @@ const Alert = ({handleClickAlert, isAlert}) => {
   }
 
   return (
-    <section className={`cardAlert ${isAlert ? "show--alert" : "hide--alert"} `}>
+    <section className={`cardAlert ${isAlert ? "show--alert" : ""} `}>
       <div className="cardAlert__container">
         <article className='cardAlert__header'>
           <h3 className="cardAlert__title">
@@ -19,7 +19,7 @@ const Alert = ({handleClickAlert, isAlert}) => {
         <article className='cardAlert__content'>
           The user <b>user</b> has been deleted
       </article>
-      <button className='cardAlert__btn' >OK</button>
+      <button onClick={handleClickClose} className='cardAlert__btn' >OK</button>
       </div>
     </section>
   )
