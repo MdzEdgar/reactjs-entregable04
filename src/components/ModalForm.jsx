@@ -12,7 +12,7 @@ const defaultValues = {
 
 const ModalForm = ({isShowModal, handleClickShowModal, createUser, updatingUser, updateUser, setUpdatingUser}) => {
 
-  const {register, handleSubmit, reset} = useForm()
+  const {register, handleSubmit, reset, formState: { errors }} = useForm()
 
   const submit = (data) => {
     if(updatingUser){
@@ -42,23 +42,28 @@ const ModalForm = ({isShowModal, handleClickShowModal, createUser, updatingUser,
         <i onClick={handleClickClose} className='modalForm__x bx bx-x'></i>
         <div className='modalForm__div'>
           <label className='modalForm__label' htmlFor="">First Name</label>
-          <input className='modalForm__input' type="text" {...register("first_name")} required />
+          <input className='modalForm__input' type="text" {...register("first_name", { required: true, minLength: 4 })} />
+          {errors.first_name && <p className='modalForm__div-error' >Please check the First Name</p>}
         </div>
         <div>
           <label className='modalForm__label' htmlFor="">Last Name</label>
-          <input className='modalForm__input' type="text" {...register("last_name")} required />
+          <input className='modalForm__input' type="text" {...register("last_name", { required: true, minLength: 4 })} />
+          {errors.last_name && <p className='modalForm__div-error'>Please check the Last Name</p>}
         </div>
         <div>
           <label className='modalForm__label' htmlFor="">Email</label>
-          <input className='modalForm__input' type="email" {...register("email")} required/>
+          <input className='modalForm__input' type="email" {...register("email", {required: true, pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/ })} />
+          {errors.email && <p className='modalForm__div-error'>Please check the Email</p>}
         </div>
         <div>
           <label className='modalForm__label' htmlFor="">Password</label>
-          <input className='modalForm__input' type="password" {...register("password")} required />
+          <input className='modalForm__input' type="password" {...register("password", { required: true, minLength: 8 })} />
+          {errors.email && <p className='modalForm__div-error'>Please check the Password</p>}
         </div>
         <div>
           <label className='modalForm__label' htmlFor="">Birthday</label>
-          <input className='modalForm__input' type="date" {...register("birthday")} required />
+          <input className='modalForm__input' type="date" {...register("birthday", {required: true})} />
+          {errors.email && <p className='modalForm__div-error'>Please check the Birthday</p>}
         </div>
         <button className='modalForm__btn'>{updatingUser ? "Save changes" : "Add new user"}</button>
       </form>

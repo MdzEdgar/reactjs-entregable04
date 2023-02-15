@@ -42,6 +42,18 @@ h3.userCard__fullName{
   color: #D3D3D3;
 }
 
+.userCard__item-icon{
+  font-size: 20px;
+}
+
+.userCard__item > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
 .userCard__footer {
   display: flex;
   flex-direction: row;

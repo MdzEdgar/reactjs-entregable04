@@ -14,7 +14,12 @@ const UserCard = ({user, deleteUser, setUpdatingUser, handleClickShowModal}) => 
       <hr className='userCard__separator' />
       <ul className='userCard__list'>
         <li className='userCard__item'><span>Email</span> {user.email}</li>
-        <li className='userCard__item'><span>Birthday</span><i className='userCard__item-icon bx bx-gift'></i> {user.birthday}</li>
+        <li className='userCard__item'>
+        <span>Birthday</span>
+          <div>
+            <i className='userCard__item-icon bx bx-gift'></i> {user.birthday}
+          </div>
+        </li>
       </ul>
       <hr className='userCard__separator' />
       <footer className='userCard__footer'>

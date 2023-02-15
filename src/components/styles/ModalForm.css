@@ -55,8 +55,16 @@
   color: rgb(178,0,0);
 }
 
-.modalForm_div {
+.modalForm__div {
   line-height: 30px;
+}
+
+.modalForm__div-error {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+  color: rgb(178,0,0);
+  text-align: center;
 }
 
 .modalForm__label {
