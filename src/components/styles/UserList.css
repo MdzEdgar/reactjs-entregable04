@@ -1,7 +1,7 @@
 .userList{
   display: flex;
   gap: 20px;
-  padding: 0 40px;
+  padding: 40px;
   max-width: 1400px;
   justify-content: center;
   align-items: center;

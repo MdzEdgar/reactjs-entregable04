@@ -11,8 +11,10 @@
   min-height: 274px;
 }
 
-.userCard__fullName{
-  font-size: 25px;
+h3.userCard__fullName{
+  display: block;
+  width: 100%;
+  font-size: 24px;
   text-align: center;
 }
 
@@ -68,7 +70,7 @@
   width: 43px;
   height: 43px;
   font-size: 22px;
-  color: rgb(119, 118, 118);
+  color: rgb(114, 114, 114);
   background-color: #F6F6F6;
   border: 1px solid #BDBDBD;
   border-radius: 5px;
@@ -76,6 +78,7 @@
 }
 
 .userCard__footer-btn-edit:hover{
-  color: black;
+  border: 1px solid black;
+  color: rgb(46, 46, 46);
 }
 
