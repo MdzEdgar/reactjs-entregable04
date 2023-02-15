@@ -4,18 +4,26 @@
   align-items: flex-start;
   border: 1px solid #E5E5E5;
   border-radius: 4px;
-  padding: 20px;
+  padding: 20px 20px 10px 20px;
   max-width: 380px;
   width: 350px;
-  /*height: 275px;*/
   min-height: 274px;
 }
 
 h3.userCard__fullName{
   display: block;
-  width: 100%;
   font-size: 24px;
+  width: 200px;
   text-align: center;
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (min-width: 768px) {
+  h3.userCard__fullName{
+    width: 100%;
+  }  
 }
 
 .userCard__separator{
