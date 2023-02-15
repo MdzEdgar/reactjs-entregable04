@@ -13,11 +13,18 @@ const UserCard = ({user, deleteUser, setUpdatingUser, handleClickShowModal}) => 
       <h3 className='userCard__fullName'>{user.first_name} {user.last_name}</h3>
       <hr className='userCard__separator' />
       <ul className='userCard__list'>
-        <li className='userCard__item'><span>Email</span> {user.email}</li>
+        <li className='userCard__item'>
+          <span>Email</span>
+            <div> 
+              <img className='userCard__item-img' src="/mail-mobile-ui.svg" alt="" />
+              {user.email}
+            </div>
+        </li>
         <li className='userCard__item'>
         <span>Birthday</span>
           <div>
-            <i className='userCard__item-icon bx bx-gift'></i> {user.birthday}
+            <img src="/calendar-mobile-ui.svg" alt="" className="userCard__item-img" />
+            {user.birthday}
           </div>
         </li>
       </ul>

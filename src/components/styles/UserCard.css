@@ -54,6 +54,11 @@ h3.userCard__fullName{
   gap: 8px;
 }
 
+.userCard__item-img{
+  height: 25px;
+  width: 25px;
+}
+
 .userCard__footer {
   display: flex;
   flex-direction: row;
