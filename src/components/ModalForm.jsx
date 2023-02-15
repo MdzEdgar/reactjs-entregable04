@@ -42,23 +42,23 @@ const ModalForm = ({isShowModal, handleClickShowModal, createUser, updatingUser,
         <i onClick={handleClickClose} className='modalForm__x bx bx-x'></i>
         <div className='modalForm__div'>
           <label className='modalForm__label' htmlFor="">First Name</label>
-          <input className='modalForm__input' type="text" {...register("first_name")}  />
+          <input className='modalForm__input' type="text" {...register("first_name")} required />
         </div>
         <div>
           <label className='modalForm__label' htmlFor="">Last Name</label>
-          <input className='modalForm__input' type="text" {...register("last_name")} />
+          <input className='modalForm__input' type="text" {...register("last_name")} required />
         </div>
         <div>
           <label className='modalForm__label' htmlFor="">Email</label>
-          <input className='modalForm__input' type="email" {...register("email")}/>
+          <input className='modalForm__input' type="email" {...register("email")} required/>
         </div>
         <div>
           <label className='modalForm__label' htmlFor="">Password</label>
-          <input className='modalForm__input' type="password" {...register("password")} />
+          <input className='modalForm__input' type="password" {...register("password")} required />
         </div>
         <div>
           <label className='modalForm__label' htmlFor="">Birthday</label>
-          <input className='modalForm__input' type="date" {...register("birthday")} />
+          <input className='modalForm__input' type="date" {...register("birthday")} required />
         </div>
         <button className='modalForm__btn'>{updatingUser ? "Save changes" : "Add new user"}</button>
       </form>

@@ -16,6 +16,10 @@ function App() {
     setIsShowModal((isShowModal) => !isShowModal)
   }
 
+  const handleAlert = () => {
+    
+  }
+
   const createUser = (data) => {
     axios
       .post(`${BASE_URL}users/`, data)
